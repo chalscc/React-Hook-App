@@ -1,5 +1,6 @@
 import { Hijo } from './Hijo'
 import { useState } from 'react';
+import { useCallback } from 'react';
 
 export const Padre = () => {
 
@@ -7,8 +8,14 @@ export const Padre = () => {
     const [valor, setValor] = useState(0);
 
     const incrementar = ( num ) => {
-        setValor( valor + num )
+        setValor( valor => valor + num )
     }
+
+    const onIncrement = useCallback(
+        (value) => {              
+            incrementar(value);
+        },
+    [])
 
 
     return (
@@ -23,11 +30,10 @@ export const Padre = () => {
                     <Hijo 
                         key={ n }
                         numero={ n }
-                        incrementar={ incrementar }
+                        incrementar={ onIncrement }
                     />
                 ))
             }
-            {/* <Hijo /> */}
         </div>
     )
 }
