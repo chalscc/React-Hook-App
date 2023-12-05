@@ -1,7 +1,7 @@
 import React from 'react'
 import { TodoItem } from './TodoItem'
 
-export const TodoList = ({todos = [], onDeleteTodo, onToggleTodo }) => {
+export const TodoList = ({todos = [], onDeleteTodo, handleToggleTodo }) => {
 
 
 
@@ -9,7 +9,7 @@ export const TodoList = ({todos = [], onDeleteTodo, onToggleTodo }) => {
     <ul className='list-group'>
         {
             todos.map( (todo) => (        
-                <TodoItem key={todo.id} todo={todo} onDeleteTodo={onDeleteTodo} onToggleTodo={onToggleTodo}/>
+                <TodoItem key={todo.id} todo={todo} onDeleteTodo={onDeleteTodo} handleToggleTodo={handleToggleTodo}/>
             ))
         }
     </ul> 
