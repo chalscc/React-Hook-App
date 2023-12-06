@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from './context/UserContext';
 
 export const LoginPage = () => {
-  return (
-    <>
-    <h1>
-      LoginPage
-    </h1>
-    </>
-  )
+
+    const usuario = useContext(UserContext);
+
+    return (
+        <>
+        <h1>
+        LoginPage
+        </h1>
+
+        <pre >
+            {JSON.stringify(usuario, null, 3)}
+        </pre>
+        </>
+    )
 }
