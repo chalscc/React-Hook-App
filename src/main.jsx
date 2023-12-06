@@ -21,24 +21,23 @@ import { TodoApp } from './08-useReducer/TodoApp'
 import { MainApp } from './09-useContext/MainApp.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <React.StrictMode>
-      {/* <HooksApp /> */}
-      {/* <CounterApp/> */}
-      {/* <CounterWithCustomHook /> */}
-      {/* <SimpleForm /> */}
-      {/* <FormWithCustomHook /> */}
-      {/* <MultipleCustomHooks /> */}
-      {/* <FocusScreen /> */}
-      {/* <Layout /> */}
-      {/* <Memorize /> */}
-      {/* <MemoHook /> */}
-      {/* <CallbackHook /> */}
-      {/* <Padre /> */}
-      {/* <TodoApp /> */}
-      <MainApp />
-      
+  <React.StrictMode>
+      <BrowserRouter>
+        {/* <HooksApp /> */}
+        {/* <CounterApp/> */}
+        {/* <CounterWithCustomHook /> */}
+        {/* <SimpleForm /> */}
+        {/* <FormWithCustomHook /> */}
+        {/* <MultipleCustomHooks /> */}
+        {/* <FocusScreen /> */}
+        {/* <Layout /> */}
+        {/* <Memorize /> */}
+        {/* <MemoHook /> */}
+        {/* <CallbackHook /> */}
+        {/* <Padre /> */}
+        {/* <TodoApp /> */}
+        <MainApp />      
+      </BrowserRouter>
     </React.StrictMode>,
-  </BrowserRouter>
 
 )
